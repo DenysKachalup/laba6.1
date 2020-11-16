@@ -42,10 +42,6 @@ int Sum(int c[], const int size)
 	else
 		return c[size] + Sum(c, size - 1);
 
-
-
-
-
 }
 int number(int mas[], const int size)
 {
@@ -53,10 +49,9 @@ int number(int mas[], const int size)
 	for (int i = 0; i < size; i++)
 	{
 		
-		if (mas[i] > 0)
+		if ((mas[i] > 0) || (mas[i] % 2 != 0))
 			k++;
-		if (mas[i] % 2 != 0)
-			k++;
+		
 	
 	}
 	return k;
@@ -78,8 +73,8 @@ int main()
 	cout << " ≥льк≥сть чисел,€к≥ задов≥льн€ють умову:  " << number(c, n) << endl;
 	cout << endl;
 
-	Sum(c, n - 1);
-	cout <<"—ума чисел, €к≥ задов≥льн€ють умову: "<< Sum(c, n - 1);
+	int s =Sum(c, n-1);
+	cout <<"—ума чисел, €к≥ задов≥льн€ють умову: "<< s;
 	cout << endl;
 
 	return 0;
